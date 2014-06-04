@@ -1,0 +1,4 @@
+unclean
+.gitignore
+wp-config.php
+config/.htpasswd

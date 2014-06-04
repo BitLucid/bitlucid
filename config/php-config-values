@@ -1,0 +1,20 @@
+php_value date.timezone "America/New_York"
+# Change expose_php value in php.ini to off.
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value mbstring.func_overload 7
+php_value default_charset "utf-8"
+# gc_probability is zero just so that the ubuntu cron job can do it instead.
+php_value session.gc_probability 0
+php_value session.cookie_httponly true
+php_value error_reporting 30711
+# 30711 = E_ALL ^ E_NOTICE
+php_value display_errors "On"
+php_value display_startup_errors "On"
+php_value log_errors "On"
+php_value html_errors "On"
+# allow sessions to last approximately a week or more
+php_value session.cookie_lifetime "900000"
+# allow session cookie to last a little longer than a week.
+# allow sessions to last that many seconds
+php_value session.cache_expire 900000
