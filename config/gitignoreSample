@@ -2,3 +2,11 @@ unclean
 .gitignore
 wp-config.php
 config/.htpasswd
+.htaccess
+www/wp-content/uploads/*
+!wp-content/uploads/.htaccess
+www/wp-content/blogs.dir/
+www/wp-content/upgrade/*
+www/sitemap.*
+www/wp-content/cache/*
+www/wp-content/backups/*
