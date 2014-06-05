@@ -10,3 +10,4 @@ www/wp-content/upgrade/*
 www/sitemap.*
 www/wp-content/cache/*
 www/wp-content/backups/*
+config/wp-config.unclean.php
