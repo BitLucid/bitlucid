@@ -7,10 +7,21 @@
 </Directory>
 <Directory /wp-admin/>
     AuthType Basic
-    AuthName "Dev site"
+    AuthName "Administrative Section"
     AuthUserFile /srv/bit/config/.htpasswd
     Require valid-user
 </Directory>
+<FilesMatch "wp-login.php">
+    AuthName "Totally Generic Administrative Login Area"
+    AuthType Basic
+    AuthUserFile /srv/bit/config/.htpasswd
+    require valid-user
+</FilesMatch>
+<Files /wp-admin/admin-ajax.php>
+    Order allow,deny
+    Allow from all
+    Satisfy any 
+</Files>
 <Directory />
     <IfModule mod_rewrite.c>
         RewriteEngine On
@@ -46,10 +57,8 @@
 
 # Turning on the rewrite engine is necessary for the following rules and features.
 
-<IfModule mod_rewrite.c>
   RewriteEngine On
-</IfModule>
-
+  RewriteRule ^login$ wp-login.php [NC,L]
 
 
 # ----------------------------------------------------------------------
