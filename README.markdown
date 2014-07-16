@@ -1,6 +1,8 @@
 
-BitLucid Wordpress Test Site
+BitLucid Wordpress Site
 --------------------------
+
+Repository for the code of [BitLucid Programming](http://bitlucid.com) http://bitlucid.com
 
 
 A mysql testing database is available via dropbox in /unclean-bittest/  Ask for an update before using it if you want the most up-to-date version of the data!
